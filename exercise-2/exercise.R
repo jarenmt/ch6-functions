@@ -14,10 +14,19 @@ CompareLength(v1(3,3), v2(55:67))
 # "Your first vector is longer by N elements"
 # "Your second vector is longer by N elements"
 DescribeDifference <- function(v1,v2)
-  
-
+{
+  diff <- length(V1) - length(V2)
+  if(diff < 0)
+  {
+    return(paste("Your first vector is longer by" , -diff, "elements."))
+  }
+  else {
+    return(paste("Your second vector is longer by", diff, "elements."))
+  }
+  ## some stuff about vector.name <- deparse(substitute v1)
+}
 # Pass two vectors to your `DescribeDifference` function
-
+DescribeDifference(v1(4,5,6,7), v2(4,5,6,67,8,99,0,10))
 
 ### Bonus ###
 
